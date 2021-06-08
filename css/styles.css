@@ -521,7 +521,7 @@ img {
 .clients:hover .client-x,
 .clients:focus .client-x {
     fill: var(--accent-color);
-    transition: all 250ms linear;
+ 
 }
 
 
@@ -593,7 +593,7 @@ footer .link:focus {
 
 
 
-.footer-ad{
+.footer-join{
     width: 145px;
     font-weight: 700;
     font-size: 14px;
@@ -639,7 +639,7 @@ footer .link:focus {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    transition: opacity 500ms linear, visibility 500ms linear;
+    transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .form {
@@ -657,13 +657,16 @@ footer .link:focus {
 }
 
 .size-close-btn{
+   
     display: flex;
     justify-content: center; 
     align-items: center;
     padding: 0;
-    
+    margin: 0;
+   
 }
 .close-button{
+    
     position: absolute;
     top: 8px;
     right: 8px;
@@ -672,9 +675,9 @@ footer .link:focus {
     padding: 0;
     border-radius: 50%;
     background-color: transparent;
-    box-shadow:1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-   
+   border: none;
 }
 
 .is-hidden {
@@ -696,6 +699,8 @@ footer .link:focus {
     cursor: pointer;
     padding: 6px 22px;
     text-align: center;
+    border-radius: 4px;
+    border: none;
 
     background-color: #F5F4FA;
     transition: background-color 250ms linear;
@@ -712,12 +717,12 @@ footer .link:focus {
 .filters-list {
     display: flex;
     justify-content: center;
-  
     margin-bottom: 50px;
 }
 
 
 .filters-item {
+  
     transition: box-shadow 250ms linear;
 }
 .filters-item:not(:last-child) {
@@ -734,7 +739,6 @@ footer .link:focus {
 
 .titel-portfolio {
     margin-bottom: 4px;
-
     font-weight: 500;
     font-size: 18px;
     line-height: 2.0;
@@ -757,7 +761,6 @@ footer .link:focus {
 .card-set {
     display: flex;
     flex-wrap: wrap;
- 
     margin-right: -30px;
     margin-bottom: -30px;
 
