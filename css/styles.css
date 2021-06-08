@@ -134,9 +134,11 @@ img {
 }
 .nav-list .link.current::after {
     content: "";
-    display: flex;
-    width: 49px;
+    position: absolute;
+    display: block;
+    width: 100%;
      height: 4px;
+     bottom:0;
     background-color: #2196F3;
    
 }
@@ -146,6 +148,8 @@ img {
 }
 
 .nav-list .link {
+    display: inline-block;
+    position: relative;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.3;
@@ -478,6 +482,9 @@ img {
     display: flex;
 
 }
+.titel-our-clients {
+    margin-bottom: 50px;
+}
 
 .our-clients .item:not(:last-child) {
     margin-right: 30px; 
@@ -487,23 +494,25 @@ img {
 .clients{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    fill:#AFB1B8;
+    align-items: center; 
     width: 170px;
     height: 92px;
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition: fill 250ms linear;
     transition: border 250ms linear;
+    
+}
+
+
+.client-x{
+    fill:#AFB1B8;
+    transition: all 250ms linear;
 }
 
 .clients:hover,
 .clients:focus {
-    border: 1px solid #2196F3;
-    fill: var(--accent-color);
-    
+    border: 1px solid #2196F3;   
     
 }
 
@@ -512,7 +521,7 @@ img {
 .clients:hover .client-x,
 .clients:focus .client-x {
     fill: var(--accent-color);
-    
+    transition: all 250ms linear;
 }
 
 
@@ -630,6 +639,7 @@ footer .link:focus {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    transition: opacity 500ms linear, visibility 500ms linear;
 }
 
 .form {
@@ -646,11 +656,14 @@ footer .link:focus {
     border-radius: 4px;
 }
 
-.close-form{
+.size-close-btn{
     display: flex;
-    /* align-items: center; */
     justify-content: center; 
-
+    align-items: center;
+    padding: 0;
+    
+}
+.close-button{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -661,11 +674,12 @@ footer .link:focus {
     background-color: transparent;
     box-shadow:1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+   
 }
 
 .is-hidden {
-    visibility: 0;
-    opacity: hidden;
+    visibility: hidden;
+    opacity: 0;
     pointer-events: none;
 }
 
@@ -811,3 +825,4 @@ footer .link:focus {
 .set-item:focus .card-text-overlay {
     transform: translateY(0%);
 }
+
